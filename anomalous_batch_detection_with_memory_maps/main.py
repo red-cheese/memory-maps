@@ -114,7 +114,7 @@ def _find_bad_batch(mmap):
     This is a very crude way of finding "bad" batches, and it's temporary.
     """
 
-    avg_losses = np.mean(mmap, axis=0)
+    avg_losses = np.mean(mmap, axis=1)
     mean_, std_ = np.mean(avg_losses), np.std(avg_losses)
     bad_batches = [i for i, loss in enumerate(avg_losses)
                    if mean_ - 3 * std_ > loss or mean_ + 3 * std_ < loss]
