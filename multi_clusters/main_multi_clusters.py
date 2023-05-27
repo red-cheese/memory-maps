@@ -14,11 +14,9 @@ from constants_multi_clusters import *
 from mnist17 import dataset, poisonings
 
 
-# NUM_ITER = 5
-# MAX_NUM_CL = 10
+NUM_ITER = 5
+MAX_NUM_CL = 10
 
-NUM_ITER = 2
-MAX_NUM_CL = 3
 
 COLOURS = ['royalblue', 'salmon', 'seagreen', 'magenta', 'turquoise', 'darkviolet', 'gold', 'lime', 'pink', 'coral', 'darkred', 'blue']
 
