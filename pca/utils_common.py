@@ -69,7 +69,7 @@ def plot_mmap_pca(mmap_pca, epoch,
 
     for i, (c_mask, c_name, c_colour) in enumerate(zip(cluster_masks, cluster_names, cluster_colours)):
         plt.scatter(mmap_pca[c_mask, comp_x], mmap_pca[c_mask, comp_y],
-                    c=c_colour, marker='o', s=4, label=c_name)
+                    c=c_colour, marker='o', s=6, label=c_name)
 
     # ax.set_aspect(1.0/ax.get_data_ratio(), adjustable='box')  # Force a square picture.
     plt.tight_layout()
