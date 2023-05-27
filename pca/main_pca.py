@@ -215,7 +215,7 @@ def mnist17_01c_noise():
     print('Model dir:', model_dir)
 
     true_cluster_labels = [~poisoned_batch_mask, poisoned_batch_mask_01, poisoned_batch_mask_025, poisoned_batch_mask_05]
-    true_cluster_names = ['Unmodified', r'$\sigma = 0.3', r'$\sigma = 0.5', r'$\sigma = 0.7']
+    true_cluster_names = ['Unmodified', r'$\sigma=0.3$', r'$\sigma=0.5$', r'$\sigma=0.7$']
     true_cluster_colours = ['blue', 'red', 'green', 'magenta']
 
     pred_cluster_labels_by_epoch = []  # Just for 2 clusters.
@@ -264,8 +264,8 @@ def mnist17_01c_noise():
                                    true_cluster_names, true_cluster_colours,
                                    explained_var, singular_values, 1, 2, model_dir, is_true=True)
 
-    utils_common.cluster_analysis_2(mmap_pca_by_epoch, pred_cluster_labels_by_epoch, cluster_names, cluster_colours,
-                                    model_dir, NUM_EPOCHS)
+    # utils_common.cluster_analysis_2(mmap_pca_by_epoch, pred_cluster_labels_by_epoch, cluster_names, cluster_colours,
+    #                                 model_dir, NUM_EPOCHS)
 
     # Save the final model to perform model-based poisoning later.
     dense_nn.model.save(experiment_dir + '/MNIST_for_poison.h5')

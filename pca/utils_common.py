@@ -122,7 +122,7 @@ def plot_mmap_pca(mmap_pca, epoch,
     # ax.set_aspect(1.0/ax.get_data_ratio(), adjustable='box')  # Force a square picture.
     plt.tight_layout()
     if len(cluster_names) > 1:
-        plt.legend()
+        plt.legend(loc='upper right')
     plt.savefig('./{}/epoch{}_{}_mmap_pca_{}-{}.png'.format(model_dir, epoch, 'true' if is_true else 'pred',
                                                             comp_x + 1, comp_y + 1), dpi=150)
     plt.gcf().clear()
