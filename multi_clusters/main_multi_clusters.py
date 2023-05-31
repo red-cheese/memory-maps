@@ -131,9 +131,9 @@ def mnist17_cl_02(poisoning_type):  # E.g. 'c_noise'
 def main():
     # _set_seed(0)
 
-    mnist17_cl_02(poisoning_type='a_base')
-    #mnist17_cl_02(poisoning_type='b_flip')
-    #mnist17_cl_02(poisoning_type='c_noise')
+    # mnist17_cl_02(poisoning_type='a_base')
+    # mnist17_cl_02(poisoning_type='b_flip')
+    mnist17_cl_02(poisoning_type='c_noise')
 
 
 # def _set_seed(seed_value):

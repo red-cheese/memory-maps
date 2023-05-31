@@ -66,13 +66,13 @@ def _add_noise(x, start_idx, end_idx, noise_std, iter_dir, plot=True):
     x[start_idx:end_idx] += noise_sample
     x = np.clip(x, a_min=0, a_max=1)
 
-    if plot:
-        f, ax = plt.subplots(2, 5, figsize=(10, 5))
-        ax = ax.flatten()
-        for i in range(10):
-            idx = start_idx + i
-            ax[i].imshow(x[idx].reshape(28, 28))
-        plt.savefig(os.path.join(iter_dir, 'noise{}.png'.format(noise_std)), dpi=150)
-        plt.gcf().clear()
+    # if plot:
+    #     f, ax = plt.subplots(2, 5, figsize=(10, 5))
+    #     ax = ax.flatten()
+    #     for i in range(10):
+    #         idx = start_idx + i
+    #         ax[i].imshow(x[idx].reshape(28, 28))
+    #     plt.savefig(os.path.join(iter_dir, 'noise{}.png'.format(noise_std)), dpi=150)
+    #     plt.gcf().clear()
 
     return x
