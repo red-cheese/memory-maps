@@ -182,10 +182,10 @@ def main():
     max_loss = 600
     min_loss = -600
 
-    plot_mmap(mmap_dir, 1, max_loss=300, min_loss=-300)
+    plot_mmap(mmap_dir, 1, max_loss=500, min_loss=-500)
     plot_mmap(mmap_dir, 2, max_loss=500, min_loss=-500)
     plot_mmap(mmap_dir, 3, max_loss=1000, min_loss=-1000)
-    plot_mmap(mmap_dir, 4, max_loss=500, min_loss=-500)
+    plot_mmap(mmap_dir, 4, max_loss=1000, min_loss=-1000)
 
 
 if __name__ == '__main__':
