@@ -178,9 +178,7 @@ def plot_mmap(mmap_dir, epoch, max_loss=_MAX_LOSS, min_loss=_MIN_LOSS):
 
 
 def main():
-    mmap_dir = '../save-64-32-noshuffle'
-    max_loss = 600
-    min_loss = -600
+    mmap_dir = '../'
 
     plot_mmap(mmap_dir, 1, max_loss=500, min_loss=-500)
     plot_mmap(mmap_dir, 2, max_loss=500, min_loss=-500)

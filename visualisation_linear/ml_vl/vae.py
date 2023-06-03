@@ -100,8 +100,7 @@ class VAE:
         vae_loss = K.mean(reconstruction_loss + kl_loss)
 
         vae.add_loss(vae_loss)
-        #vae.compile(optimizer=Adam(learning_rate=5*1e-4))
-        vae.compile(optimizer=Adam(learning_rate=1e-3))
+        vae.compile(optimizer=Adam(learning_rate=1e-4))
 
         return encoder, generator, vae
 
