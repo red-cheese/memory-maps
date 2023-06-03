@@ -129,7 +129,7 @@ def gaussian3():
 
     print('Experiment 3')
 
-    train_x, train_y, test_x, test_y = _basic_train_test()
+    train_x, train_y, test_x, test_y, train_batch_id = _basic_train_test()
 
     # Poison several scattered batches with different flip probabilities.
     train_y = _flip_labels(train_y, 20 * BATCH_SIZE, 23 * BATCH_SIZE, 0.3)
@@ -151,7 +151,8 @@ def gaussian3():
 
     # Remove bad batches and recalibrate until no more bad batches are found.
     while bad_batch_indices:
-        train_x, train_y = _remove_batches(train_x, train_y, bad_batch_indices)
+        train_x, train_y, train_batch_id, removed_batches = _remove_batches(
+            train_x, train_y, bad_batch_indices, train_batch_id)
 
         print('Recalibrating...')
         # Recalibrate for 1 epoch and look at the last mmap again.
@@ -388,7 +389,7 @@ def gaussian4():
 
 
 def main():
-    gaussian4()
+    gaussian3()
 
 
 if __name__ == '__main__':
