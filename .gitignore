@@ -6,3 +6,5 @@
 *.mmap
 checkpoint
 *.h5
+demo_vae_bridges/data/*
+demo_vae_bridges/models/*
